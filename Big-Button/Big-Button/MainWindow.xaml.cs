@@ -32,10 +32,11 @@ namespace Big_Button
         private void BigButton_Click(object sender, RoutedEventArgs e)
         {
             var document = DocX.Create("MyReport.docx");
-            document.InsertParagraph($"REPORT\n");
+            document.InsertParagraph($"REPORT");
+            document.InsertParagraph($"{DateTime.Now}\n");
             document.Save();
 
-            LabelLiveOutput.Content = "Created document";
+            Thread.Sleep(2000);
 
             createFoldersAndFiles();
         }
@@ -74,7 +75,7 @@ namespace Big_Button
                     {
                         for(int j=0; j<(k+1)*10; j++)
                         {
-                            File.WriteAllText(filePath, $"Line {j+1}");
+                            File.AppendAllText(filePath, $"Line {j+1}\n");
                         }
                     }
                     else
@@ -92,8 +93,7 @@ namespace Big_Button
 
                 #endregion
             }
-
-            LabelLiveOutput.Content = "Finished timing, opening file";
+            LabelHeader.Content = "Opening file";
             Process.Start("WINWORD.EXE", "MyReport.docx");
         }
 

@@ -5,34 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Big_Button"
         mc:Ignorable="d"
-        Title="Chen's Calculator" Height="450" Width="500" FontSize="35">
+        Title="Chen's Calculator" Height="400" Width="300" FontSize="35">
     <Grid Background="#1C1C1C">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="0.5*"/>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="0.5*"/>
             <ColumnDefinition Width="0.5*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="0.25*" />
+            <RowDefinition Height="0.5*" />
+            <RowDefinition Height="0.5*" />
             <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
+            <RowDefinition Height="0.5*" />
+            <RowDefinition Height="0.5*" />
             <RowDefinition Height="0.5*" />
         </Grid.RowDefinitions>
 
         <Label x:Name="LabelBackground"  Grid.Column="1" Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#F0D500"/>
-        <Label x:Name="LabelHeader"  Content="BIG BUTTON 6000" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#F0D500" FontWeight="Bold" FontSize="30"/>
-
+        <Label x:Name="LabelHeader" Content="Press to Begin" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="3" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Background="#F0D500" FontWeight="Bold" FontSize="20"/>
 
         <Button x:Name="BigButton" Content="GO"  Grid.Column="2" Grid.Row="2" Background="#F32013" Foreground="White" FontWeight="Bold" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Click="BigButton_Click"/>
-
-        <Label x:Name="LabelLiveOutput" Content="Output:" Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="3" Grid.RowSpan="2" FontSize="20" Background="white"/>
-
     </Grid>
 </Window>
